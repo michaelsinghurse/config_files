@@ -1,0 +1,7 @@
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2
+autocmd FileType json setlocal ts=2 sts=2 sw=2
+autocmd FileType html setlocal ts=2 sts=2 sw=2
+autocmd BufEnter *.sh setlocal ts=2 sts=2 sw=2
+set filetype=on
+filetype indent on
+set number
