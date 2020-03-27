@@ -1,7 +1,22 @@
-autocmd FileType javascript setlocal ts=2 sts=2 sw=2
+" .vimrc
+
+" switch on filetype detection, search for plugins, and auto compute indents
+filetype plugin indent on
+
+" ts = tabstop, sts = , sw = , textwidth = breaks text over this width
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2 textwidth=80
 autocmd FileType json setlocal ts=2 sts=2 sw=2
 autocmd FileType html setlocal ts=2 sts=2 sw=2
 autocmd BufEnter *.sh setlocal ts=2 sts=2 sw=2
-set filetype=on
-filetype indent on
+
+" show the cursor position in the lower right window
+set ruler
+
+" use the indent of hte previous line for a new line
+set autoindent
+
+" turn on line numbers
 set number
+
+" enable sytax color scheme
+syntax on
