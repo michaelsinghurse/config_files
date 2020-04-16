@@ -9,6 +9,7 @@ autocmd FileType javascript setlocal ts=2 sw=2 expandtab textwidth=80
 autocmd FileType json setlocal ts=2 sw=2 expandtab
 autocmd FileType html setlocal ts=2 sw=2 expandtab
 autocmd BufEnter *.sh setlocal ts=2 sw=2 expandtab textwidth=80
+autocmd BufEnter *.pug setlocal ts=2 sw=2 expandtab textwidth=80
 
 " show the cursor position in the lower right window
 set ruler
@@ -21,3 +22,6 @@ set number
 
 " enable sytax color scheme
 syntax on
+
+" highlight search results
+set hlsearch
