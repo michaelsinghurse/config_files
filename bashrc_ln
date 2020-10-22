@@ -123,3 +123,11 @@ export NVM_DIR="$HOME/.nvm"
 # Brother Scanner 
 alias scan-start='brscan-skey'
 alias scan-stop='brscan-skey -t'
+
+# Make vi run vim
+alias vi='vim'
+
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
+

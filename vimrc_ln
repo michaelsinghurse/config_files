@@ -1,15 +1,23 @@
 " .vimrc
 
-"switch on filetype detection
+" make sure vim is not restricted to the vi feature set
+set nocompatible
+
+" load standard plugin to recognize different file types
+filetype plugin on
+
+" switch on filetype detection
 filetype on
 
 " ts = tabstop, sw = shiftwidth, textwidth = breaks text over this width
 " for more about tabs: http://vimdoc.sourceforge.net/htmldoc/options.html#'tabstop'
-autocmd FileType javascript setlocal ts=2 sw=2 expandtab textwidth=80
-autocmd FileType json setlocal ts=2 sw=2 expandtab
-autocmd FileType html setlocal ts=2 sw=2 expandtab
-autocmd BufEnter *.sh setlocal ts=2 sw=2 expandtab textwidth=80
-autocmd BufEnter *.pug setlocal ts=2 sw=2 expandtab textwidth=80
+" autocmd FileType javascript setlocal ts=2 sw=2 expandtab textwidth=80
+" autocmd FileType json setlocal ts=2 sw=2 expandtab
+" autocmd FileType html setlocal ts=2 sw=2 expandtab
+" autocmd FileType css setlocal ts=2 sw=2 expandtab
+" autocmd BufEnter *.sh setlocal ts=2 sw=2 expandtab textwidth=80
+" autocmd BufEnter *.pug setlocal ts=2 sw=2 expandtab textwidth=80
+set ts=2 sw=2 expandtab textwidth=80
 
 " show the cursor position in the lower right window
 set ruler
@@ -20,8 +28,17 @@ set autoindent
 " turn on line numbers
 set number
 
-" enable sytax color scheme
-syntax on
+" enable (on) or disable (off) syntax color scheme
+syntax off 
 
 " highlight search results
 set hlsearch
+
+" Plugins will be downloaded under the specified directory.
+call plug#begin('~/.vim/plugged')
+
+" Declare the list of plugins.
+Plug 'sheerun/vim-polyglot'
+
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
